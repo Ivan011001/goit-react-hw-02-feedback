@@ -42,8 +42,9 @@ export default class App extends Component {
             onLeaveFeedback={this.feedbackClickHadler}
           />
         </Section>
-        {total ? (
-          <Section title="Statistics">
+
+        <Section title="Statistics">
+          {total ? (
             <Statistics
               good={good}
               neutral={neutral}
@@ -51,10 +52,10 @@ export default class App extends Component {
               total={total}
               positivePercentage={positivePercentage}
             />
-          </Section>
-        ) : (
-          <Notification message="There is no feedback yet..." />
-        )}
+          ) : (
+            <Notification message="There is no feedback yet..." />
+          )}
+        </Section>
       </AppContainer>
     );
   }
