@@ -1,18 +1,19 @@
 import PropTypes from 'prop-types';
+import { RatingButton } from './FeedbackOptions.styled';
 
 export default function FeedbackOptions({ options, onLeaveFeedback }) {
   return (
-    <div>
+    <ul>
       {options.map(option => (
-        <button
+        <RatingButton
           type="button"
           key={option}
           onClick={() => onLeaveFeedback(option)}
         >
           {option}
-        </button>
+        </RatingButton>
       ))}
-    </div>
+    </ul>
   );
 }
 
