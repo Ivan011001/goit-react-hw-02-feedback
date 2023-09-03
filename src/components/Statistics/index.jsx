@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import { Stats, StatsType } from './Statisctics.styled';
 
 export default function Statistics({
   good,
@@ -8,13 +9,23 @@ export default function Statistics({
   positivePercentage,
 }) {
   return (
-    <div>
-      <p>Good: {good}</p>
-      <p>Neutral: {neutral}</p>
-      <p>Bad: {bad}</p>
-      <p>Total: {total}</p>
-      <p>Positive percentage: {positivePercentage.toFixed()}%</p>
-    </div>
+    <Stats>
+      <StatsType>
+        Good: <span>{good}</span>
+      </StatsType>
+      <StatsType>
+        Neutral: <span>{neutral}</span>
+      </StatsType>
+      <StatsType>
+        Bad: <span>{bad}</span>
+      </StatsType>
+      <StatsType>
+        Total: <span>{total}</span>
+      </StatsType>
+      <StatsType>
+        Positive percentage: <span>{positivePercentage.toFixed()}%</span>
+      </StatsType>
+    </Stats>
   );
 }
 

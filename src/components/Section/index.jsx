@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { SectionContainer, SectionTitle } from './Section.styled';
+import { SectionTitle } from './Section.styled';
 
 export default function Section({ title, children }) {
   return (
